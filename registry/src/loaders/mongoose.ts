@@ -1,9 +1,13 @@
 import * as mongoose from "mongoose";
 
 export default () => {
+  let remoteUri =
+    "mongodb://tenx:10xxpassword@ds217349.mlab.com:17349/visitor-manager";
+  let localUri = "mongodb://localhost:27017/inno-registry";
+
   return new Promise((resolve, reject) => {
     mongoose
-      .connect("mongodb://localhost:27017/inno-registry", {
+      .connect(remoteUri, {
         useNewUrlParser: true,
         useCreateIndex: true
       })
