@@ -54,7 +54,6 @@ router.patch(
     })
   }),
   (req, res, next) => {
-    console.log(req.body);
     Controller.patchArchiveEntries(req, res, next);
   }
 );
@@ -66,7 +65,6 @@ router.delete(
     })
   }),
   (req, res, next) => {
-    console.log(req.body);
     Controller.deleteEntries(req, res, next);
   }
 );

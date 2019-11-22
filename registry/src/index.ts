@@ -26,7 +26,7 @@ async function startServer() {
   // *******************************************************
 
   // load express and mongo
-  console.log(__dirname);
+
   const staticFiles = express.static(path.join(__dirname + "../../public"));
   app.use(staticFiles);
 
@@ -37,9 +37,11 @@ async function startServer() {
   // listen to port
   app.listen(config.PORT, () => {
     logger.info(
-      `💃   Server listening on port: ${config.BASE_URL}:${config.PORT}`
+      `💃   Server listening on port: ${config.BASE_URL}:${config.PORT}
+      `
     );
   });
 }
 
+console.log(`🎠   Starting application in mode : ${process.env.NODE_ENV} 🎠`);
 startServer();

@@ -19,15 +19,16 @@ async function startServer() {
     // --------------------------------------------------------------------------------
     // *******************************************************
     // load express and mongo
-    console.log(__dirname);
     const staticFiles = express.static(path.join(__dirname + "../../public"));
     app.use(staticFiles);
     await require("./loaders").default({ expressApp: app });
     logger = typedi_1.Container.get("logger");
     // listen to port
     app.listen(config_1.default.PORT, () => {
-        logger.info(`💃   Server listening on port: ${config_1.default.BASE_URL}:${config_1.default.PORT}`);
+        logger.info(`💃   Server listening on port: ${config_1.default.BASE_URL}:${config_1.default.PORT}
+      `);
     });
 }
+console.log(`🎠   Starting application in mode : ${process.env.NODE_ENV} 🎠`);
 startServer();
 //# sourceMappingURL=index.js.map

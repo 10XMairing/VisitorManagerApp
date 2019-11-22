@@ -1,4 +1,4 @@
 export default {
-  auth: "280934AMoGp20Io5d029279",
-  sender: "TESTIN"
+  auth: process.env.MSG91_AUTH,
+  sender: process.env.MSG91_SENDER
 };

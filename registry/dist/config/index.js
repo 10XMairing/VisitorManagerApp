@@ -8,15 +8,17 @@ exports.default = {
         level: process.env.LOG_LEVEL || "silly"
     },
     SALT_ROUNDS: 12,
-    JWT_AUTH_USER: process.env.JWT_AUTH_USER || "testdev_jwt_user",
-    JWT_AUTH_ADMIN: process.env.JWT_AUTH_ADMIN || "testdev_jwt_admin",
+    JWT_AUTH_USER: process.env.JWT_AUTH_USER || "test1",
+    JWT_AUTH_ADMIN: process.env.JWT_AUTH_ADMIN || "test2",
     GMAIL_OAUTH: {
-        user: "tenx.devs@gmail.com",
-        type: "oauth2",
-        cliendid: "950339655299-ug2081au8iivjgk1ukiqc4fj0ru63q5p.apps.googleusercontent.com",
-        client_secret: "uG-BAV6yKIxU-VsRJYdFGLQU ",
-        refresh_token: "1//04Wtm-nwf1U_xCgYIARAAGAQSNwF-L9IrUBRfF7ahvaQ4wFi9fhLqunC9C6UNjspOyTQUUJQ9As9pN5eGUAK-MGa3twOw1EJ1DRs",
-        redirect_url: "https://developers.google.com/oauthplayground/"
-    }
+        user: process.env.GMAIL_USER,
+        type: process.env.GMAIL_TYPE,
+        cliendid: process.env.GMAIL_CLIENT_ID,
+        client_secret: process.env.GMAIL_CLIENT_SECRET,
+        refresh_token: process.env.GMAIL_REFRESH_TOKEN,
+        redirect_url: process.env.GMAIL_REDIRECT_URL
+    },
+    MLAB_USER: process.env.MLAB_USER,
+    MLAB_PASSWORD: process.env.MLAB_PASSWORD
 };
 //# sourceMappingURL=index.js.map

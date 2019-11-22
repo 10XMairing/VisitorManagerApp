@@ -42,7 +42,6 @@ router.patch("/archive/?(restore=:restore)?", celebrate_1.celebrate({
         ids: celebrate_1.Joi.array().items(celebrate_1.Joi.string())
     })
 }), (req, res, next) => {
-    console.log(req.body);
     Controller.patchArchiveEntries(req, res, next);
 });
 router.delete("/", celebrate_1.celebrate({
@@ -50,7 +49,6 @@ router.delete("/", celebrate_1.celebrate({
         ids: celebrate_1.Joi.array().items(celebrate_1.Joi.string())
     })
 }), (req, res, next) => {
-    console.log(req.body);
     Controller.deleteEntries(req, res, next);
 });
 exports.default = router;
