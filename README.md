@@ -18,8 +18,8 @@ The frontend has already been compiled and added to server files.
     git clone https://github.com/10XMairing/VisitorManagerApp
     cd VisitorManagerApp/registry
     npm i 
-    npm build //build the ts files
-    npm start //run compiled code
+    npm build
+    npm start
 
 The vue frontend is at `vueapp`
 To test
