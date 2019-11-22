@@ -1,6 +1,9 @@
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
 export default {
-  BASE_URL: process.env.BASE_URL || "http://localhost",
+  BASE_URL:
+    process.env.NODE_ENV == "production"
+      ? process.env.BASE_URL
+      : "http://localhost",
   PORT: process.env.PORT || 3000,
   logs: {
     level: process.env.LOG_LEVEL || "silly"
