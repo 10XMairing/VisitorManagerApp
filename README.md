@@ -2,6 +2,13 @@
 
 [Demo Link HERE](http://13.233.245.238/)
 
+###  working features
+
+ 1. Add a Host by clicking on `Manage Hosts`
+ 2. Add a visitor entry by clicking `Add Entry`
+ 3. Checkout a visitor by clicking on the table row at home page
+ 4. Select and Archive entries (click delete or archive icon at top)
+ 5. Select and Delete entries (click delete or archive icon at top)
 
 To run the application
 
@@ -10,8 +17,9 @@ The frontend has already been compiled and added to server files.
 
     git clone https://github.com/10XMairing/VisitorManagerApp
     cd VisitorManagerApp/registry
-    npm i
-    npm start
+    npm i 
+    npm build //build the ts files
+    npm start //run compiled code
 
 The vue frontend is at `vueapp`
 To test
@@ -175,5 +183,6 @@ Its most useful with used together with Dependency Injection tools like `typedi`
 | router| contains router file  |
 | store |Contains the vuex store and modules  |
 | views |Contains the views  file  |
+
 
 
