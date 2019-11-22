@@ -118,6 +118,9 @@ Its most useful with used together with Dependency Injection tools like `typedi`
 |**utils**|Contains global utility functions.|
 
 
+* nodemailer implemented with gmail oauth2
+
+
 ### The Frontend Structure
 
 
