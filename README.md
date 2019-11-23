@@ -2,13 +2,13 @@
 
 [Demo Link HERE](http://13.233.245.238/)
 
-###  working features
+### working features
 
- 1. Add a Host by clicking on `Manage Hosts`
- 2. Add a visitor entry by clicking `Add Entry`
- 3. Checkout a visitor by clicking on the table row at home page
- 4. Select and Archive entries (click delete or archive icon at top)
- 5. Select and Delete entries (click delete or archive icon at top)
+1.  Add a Host by clicking on `Manage Hosts`
+2.  Add a visitor entry by clicking `Add Entry`
+3.  Checkout a visitor by clicking on the table row at home page
+4.  Select and Archive entries (click delete or archive icon at top)
+5.  Select and Delete entries (click delete or archive icon at top)
 
 To run the application
 
@@ -17,59 +17,63 @@ The frontend has already been compiled and added to server files.
 
     git clone https://github.com/10XMairing/VisitorManagerApp
     cd VisitorManagerApp/registry
-    npm i 
+    npm i
     npm build
     npm start
 
-The vue frontend is at `vueapp`
+The vue frontend is at `frontend`
 To test
 
-    cd vueapp
+    cd frontend
     npm run serve
-
 
 To Build
 This will compile the frontend code and move it to public folder of the server dir.`registry/public`
 
     npm run build
 
+Now you can run the server with (/registry)
+`npm run dev`
 
-
+Or Compile and run at /registry
+`npm run build`
+`npm start`
 
 ## Resources Used:
-## frontend : 
-|  |  |
-|--|--|
-|**Typescript**|provides typing for javascript , [link](https://www.typescriptlang.org/)|
-  |**Vue**|Js framework for frontend web dev|
- |**Vuex**|State management Library|
- |**VueRouter**|Routing library|
- | **Axios** :| Networking Library|
-  |**Typedi** | : Dependency injection framework|
- | **Vuetify**| : Material design library for vue  |
+
+## frontend :
+
+|                |                                                                          |
+| -------------- | ------------------------------------------------------------------------ |
+| **Typescript** | provides typing for javascript , [link](https://www.typescriptlang.org/) |
+| **Vue**        | Js framework for frontend web dev                                        |
+| **Vuex**       | State management Library                                                 |
+| **VueRouter**  | Routing library                                                          |
+| **Axios** :    | Networking Library                                                       |
+| **Typedi**     | : Dependency injection framework                                         |
+| **Vuetify**    | : Material design library for vue                                        |
 
 ## Backend
 
-
-|  |  |
-|--|--|
-|**Typescript**|provides typing for javascript , [link](https://www.typescriptlang.org/)|
-| Node/Express | [node](https://nodejs.org/en/)|
-| Mongo/Mongoose | node library for mongo|
-| Axios | networking library |
-| Celebrate & Joi | express middleware for request validation |
-| Typedi | Dependency injection framework |
-| nodemailer | mailing library|
-| Winston |logging library |
-| Event-Dispatch | library for event based execution |
-
-
+|                 |                                                                          |
+| --------------- | ------------------------------------------------------------------------ |
+| **Typescript**  | provides typing for javascript , [link](https://www.typescriptlang.org/) |
+| Node/Express    | [node](https://nodejs.org/en/)                                           |
+| Mongo/Mongoose  | node library for mongo                                                   |
+| Axios           | networking library                                                       |
+| Celebrate & Joi | express middleware for request validation                                |
+| Typedi          | Dependency injection framework                                           |
+| nodemailer      | mailing library                                                          |
+| Winston         | logging library                                                          |
+| Event-Dispatch  | library for event based execution                                        |
 
 ### Reason for using typescript
+
 Typescript provides much better structure to the overall project with its interfaces and typing feature.
 Its most useful with used together with Dependency Injection tools like `typedi` as demonstrated here
 
 ### The Backend Structure
+
 ```
 |-- AssignInno
     |-- package-lock.json
@@ -112,28 +116,25 @@ Its most useful with used together with Dependency Injection tools like `typedi`
         |-- subscribers
         |   |-- EventRegister.ts
         |-- utils
-        
+
 ```
-|***package*** | ***description*** |
-|--|--|
-| **loaders** | has services that loads all depencies for express and sets it up like mongo,loggers etc |
-|**api**|Contains the api logic. which is handled by its respective Controllers|
-|**controller**|Interacts with the router responses and the different services|
-|**services**|Contains specific services that deals with the databases or email services. These are the main data sources or api executors|
-|**middlewares**|Contains the middlewares for authentication. No auth was implemented in this project|
-|**subscribers**|Has event handlers using the `event-dispatch` library. events like `checkin` and `checkout` are caught by these callbacks and various services like email and sms services are executed. These events are called by the Controllers during checkin and checkout|
-|**config**|configuration keys.|
-|**interface**|Contains interfaces for typescript.|
-|**models**|Contains the database models.|
-|**utils**|Contains global utility functions.|
 
+| **_package_**   | **_description_**                                                                                                                                                                                                                                               |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **loaders**     | has services that loads all depencies for express and sets it up like mongo,loggers etc                                                                                                                                                                         |
+| **api**         | Contains the api logic. which is handled by its respective Controllers                                                                                                                                                                                          |
+| **controller**  | Interacts with the router responses and the different services                                                                                                                                                                                                  |
+| **services**    | Contains specific services that deals with the databases or email services. These are the main data sources or api executors                                                                                                                                    |
+| **middlewares** | Contains the middlewares for authentication. No auth was implemented in this project                                                                                                                                                                            |
+| **subscribers** | Has event handlers using the `event-dispatch` library. events like `checkin` and `checkout` are caught by these callbacks and various services like email and sms services are executed. These events are called by the Controllers during checkin and checkout |
+| **config**      | configuration keys.                                                                                                                                                                                                                                             |
+| **interface**   | Contains interfaces for typescript.                                                                                                                                                                                                                             |
+| **models**      | Contains the database models.                                                                                                                                                                                                                                   |
+| **utils**       | Contains global utility functions.                                                                                                                                                                                                                              |
 
-* nodemailer implemented with gmail oauth2
-
+- nodemailer implemented with gmail oauth2
 
 ### The Frontend Structure
-
-
 
 ```
 |-- AssignInno
@@ -177,12 +178,9 @@ Its most useful with used together with Dependency Injection tools like `typedi`
             |-- example.spec.ts
 ```
 
-|Package|Description  |
-|--|--|
-| Api |Contains services that handles all database calls  |
-| router| contains router file  |
-| store |Contains the vuex store and modules  |
-| views |Contains the views  file  |
-
-
-
+| Package | Description                                       |
+| ------- | ------------------------------------------------- |
+| Api     | Contains services that handles all database calls |
+| router  | contains router file                              |
+| store   | Contains the vuex store and modules               |
+| views   | Contains the views file                           |
