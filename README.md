@@ -10,6 +10,8 @@
 4.  Select and Archive entries (click delete or archive icon at top)
 5.  Select and Delete entries (click delete or archive icon at top)
 
+- sms feature has been disabled due to low credits
+
 To run the application
 
 The main app is at `/registry`.
