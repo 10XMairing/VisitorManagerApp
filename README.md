@@ -10,7 +10,10 @@
 4.  Select and Archive entries (click delete or archive icon at top)
 5.  Select and Delete entries (click delete or archive icon at top)
 
-- sms feature has been disabled due to low credits
+- An email will be sent to Host and Visitor during checkin
+- An email will be sent to Visitor at checkout
+
+* For now sms feature has been disabled due to low credits
 
 To run the application
 
