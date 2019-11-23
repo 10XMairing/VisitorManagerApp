@@ -7,6 +7,8 @@ export default () => {
 
   let connectionUri =
     process.env.NODE_ENV == "production" ? remoteUri : localUri;
+
+  console.log(`Connectiong to db :${connectionUri}`);
   return new Promise((resolve, reject) => {
     mongoose
       .connect(connectionUri, {
