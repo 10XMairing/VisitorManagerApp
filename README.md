@@ -1,6 +1,6 @@
 ## Visitor App
 
-[Demo Link HERE](http://13.233.245.238/)
+[Demo Link HERE](https://visitor-application.herokuapp.com/)
 
 ### working features
 
@@ -16,6 +16,8 @@
 * For now sms feature has been disabled due to low credits
 
 To run the application
+
+The email and sms service wont work without the api keys for gmail and MSG91(see `.env.example` at `/registry`)
 
 The main app is at `/registry`.
 The frontend has already been compiled and added to server files.
@@ -46,17 +48,8 @@ Or Compile and run at /registry
 
 ## Resources Used:
 
-## frontend :
-
-|                |                                                                          |
-| -------------- | ------------------------------------------------------------------------ |
-| **Typescript** | provides typing for javascript , [link](https://www.typescriptlang.org/) |
-| **Vue**        | Js framework for frontend web dev                                        |
-| **Vuex**       | State management Library                                                 |
-| **VueRouter**  | Routing library                                                          |
-| **Axios** :    | Networking Library                                                       |
-| **Typedi**     | : Dependency injection framework                                         |
-| **Vuetify**    | : Material design library for vue                                        |
+- `Docker` was used for deploying to heroku
+- But the database is hosted on mlab
 
 ## Backend
 
@@ -138,6 +131,18 @@ Its most useful with used together with Dependency Injection tools like `typedi`
 | **utils**       | Contains global utility functions.                                                                                                                                                                                                                              |
 
 - nodemailer implemented with gmail oauth2
+
+## frontend :
+
+|                |                                                                          |
+| -------------- | ------------------------------------------------------------------------ |
+| **Typescript** | provides typing for javascript , [link](https://www.typescriptlang.org/) |
+| **Vue**        | Js framework for frontend web dev                                        |
+| **Vuex**       | State management Library                                                 |
+| **VueRouter**  | Routing library                                                          |
+| **Axios** :    | Networking Library                                                       |
+| **Typedi**     | : Dependency injection framework                                         |
+| **Vuetify**    | : Material design library for vue                                        |
 
 ### The Frontend Structure
 
