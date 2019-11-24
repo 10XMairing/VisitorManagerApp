@@ -1,5 +1,7 @@
 ## Visitor App
 
+An application to track visitors in an office with check in/check out features and notification with emails
+
 [Demo Link HERE](https://visitor-application.herokuapp.com/)
 
 ### working features
